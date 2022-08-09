@@ -19,8 +19,6 @@ public class ShowTenServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        fillingRepo();
-
         PrintWriter writer = response.getWriter();
         response.setContentType("text/html;charset=UTF-8");
         writer.printf("<html><body>");
@@ -43,6 +41,11 @@ public class ShowTenServlet extends HttpServlet {
         writer.println("</table>");
         writer.printf("</body></html>");
         writer.close();
+    }
+
+    @Override
+    public void init() throws ServletException {
+        fillingRepo();
     }
 
     private void fillingRepo() {
