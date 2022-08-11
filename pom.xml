@@ -15,4 +15,8 @@
         <project.build.sourceEncording>UTF-8</project.build.sourceEncording>
     </properties>
 
+    <modules>
+        <module>servlet-homework</module>
+    </modules>
+
 </project>
