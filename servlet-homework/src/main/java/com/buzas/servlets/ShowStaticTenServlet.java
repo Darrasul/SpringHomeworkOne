@@ -13,8 +13,6 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/showStaticTen")
 public class ShowStaticTenServlet extends HttpServlet {
-// Т.к. мы не прикручиваем базу данных, то здесь и в ShowClickedProductServlet сделана идентичная
-// статическая инициализация репозитория.
     private final ProductRepository repo = new ProductRepository();
 
     @Override
@@ -32,11 +30,8 @@ public class ShowStaticTenServlet extends HttpServlet {
 
         for (Product product : repo.showAll()) {
             writer.println("<tr>");
-//            Данные сслыки по какой-то причине остаются некликабельными, т.е. ничего не делают. Открытие новых страниц
-//            по ним не дает результата. При этом отдельный сервлет данные ссылки при ручном открытии отрисовывает как
-//            надо. У меня есть таблица со ссылками, у меня есть сервлет, отрисовывающий страницы, но соединить это я не смог
-            writer.println("<td><a href=\"localhost:8080/ServletHomework/" + product.getId().toString() + "\">"
-                    + product.getId() + "</td>");
+            writer.println("<td><a href='" + getServletContext().getContextPath() +
+                    "/" + product.getId().toString() + "'\">" + product.getId() + "</td>");
             writer.println("<td>" + product.getTitle() + "</td>");
             writer.println("<td>" + product.getCost() + "</td>");
             writer.println("</tr>");
