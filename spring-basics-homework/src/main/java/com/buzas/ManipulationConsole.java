@@ -25,6 +25,7 @@ public class ManipulationConsole {
                     "Add - allows you to enter the product id to add it to the cart\n" +
                     "Remove - allows you to enter the product id to remove it from the cart\n" +
                     "Cart - shows the products in the cart\n" +
+                    "ShowID - shows ID of the cart\n" +
                     "Refresh - clears the cart\n" +
                     "Exit - close console");
             System.out.println("Enter the command");
@@ -66,10 +67,12 @@ public class ManipulationConsole {
                 case "refresh":
                     cartService.removeAll();
                     break;
+                case "showid":
+                    System.out.println(cartService.getCart().hashCode());
+                    break;
             }
         }
 
-        scanner.close();
         context.close();
     }
 }

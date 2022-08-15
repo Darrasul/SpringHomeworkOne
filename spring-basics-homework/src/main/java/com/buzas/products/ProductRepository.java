@@ -1,6 +1,7 @@
 package com.buzas.products;
 
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
@@ -8,7 +9,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
-@Component
+//@Component
+@Repository
 public class ProductRepository {
     private List<Product> products;
 
