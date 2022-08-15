@@ -17,6 +17,7 @@
 
     <modules>
         <module>servlet-homework</module>
+        <module>spring-basics-homework</module>
     </modules>
 
 </project>
