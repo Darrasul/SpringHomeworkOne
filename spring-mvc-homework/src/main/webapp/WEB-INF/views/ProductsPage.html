@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products</title>
+</head>
+<body>
+<a href="http://localhost:8080/mvc-homework/product">Обновить страницу</a>
+<div align="center">
+<table border="1">
+    <thead align="center">
+    <td>id</td>
+    <td>name</td>
+    <td>buttons</td>
+    </thead>
+    <tbody align="center">
+    <tr th:each="product : ${products}">
+        <td>
+            <span th:text="${product.id}"></span>
+        </td>
+        <td>
+            <span th:text="${product.name}"></span>
+        </td>
+        <td>
+            <form action="#" th:action="@{/product/} + ${product.id}" method="get">
+                <input type="hidden" id="id" name="id" th:object="${product.id}">
+                <button type="submit">Inspect</button>
+            </form>
+            <form action="#" th:action="@{/product/delete/} + ${product.id}" method="post">
+            <input type="hidden" id="id_delete" name="id" th:object="${product.id}">
+            <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+    <div>
+        <form action="#" th:action="@{create/}" method="post">
+            <label for="name">Add</label>
+            <input type="text" id="name" name="name" placeholder="Enter name of the product" th:filed="*{name}">
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <div>
+        <form action="#" th:action="@{delete/all}" method="post">
+            <input type="hidden" id="name_delete" name="name" >
+            <label for="name">Delete</label>
+            <button type="submit">Delete All</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

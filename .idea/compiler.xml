@@ -8,7 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="servlet-homework" />
         <module name="spring-basics-homework" />
+        <module name="spring-mvc-homework" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="mvc-homework" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
