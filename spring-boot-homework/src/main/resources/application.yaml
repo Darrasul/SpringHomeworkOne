@@ -1,0 +1,12 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /SpringBoot
+logging:
+  level:
+    com:
+      buzas:
+        controllers: fatal
+  file:
+    path: ./
+    name: controllerLogsInfo

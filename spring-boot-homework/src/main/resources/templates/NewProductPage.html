@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://localhost:8080/SpringBoot/product/">На главную</a>
+<span>
+    <table cellspacing="5" align="center">
+        <thead>
+            <td>id</td>
+            <td>name</td>
+            <td>price</td>
+            <td>currency</td>
+        </thead>
+        <tbody>
+        <tr>
+           <td><span th:text="${product.id}"></span></td>
+           <td><span th:text="${product.name}"></span></td>
+           <td><span th:text="${product.price}"></span></td>
+           <td><span th:text="${product.currency}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+        <form action="#" th:action="@{create/}" method="post" th:object="${product}">
+            <input type="hidden" id="id" name="id" th:field="*{id}">
+            <div>
+               <label for="name">New name</label>
+                <input type="text" id="name" name="name" placeholder="Enter name of the product" th:field="*{name}">
+                <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>
+            </div>
+            <div>
+                <label for="price">New price</label>
+                <input type="text" id="price" name="price" placeholder="Enter price of the product" th:field="*{price}">
+                <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}"></p>
+            </div>
+            <div>
+                <label for="currency">New currency</label>
+                <input type="text" id="currency" name="currency" placeholder="Enter currency of the product" th:field="*{currency}">
+                <p th:if="${#fields.hasErrors('currency')}" th:errors="*{currency}"></p>
+            </div>
+        <button type="submit">Create</button>
+        </form>
+
+</span>
+</body>
+</html>
