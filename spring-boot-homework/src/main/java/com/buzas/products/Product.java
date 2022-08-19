@@ -13,8 +13,6 @@ public class Product {
     @Size(min = 3, message = "Name too short")
     private String name;
 
-//    @NotBlank(message = "Specify the amount")
-//    @Pattern(regexp = "^\\d+$", message = "Only numbers")
     @Min(value = 0, message = "price too low")
     @Max(value = 500, message = "price too big")
     @NotNull(message = "Specify the price")
