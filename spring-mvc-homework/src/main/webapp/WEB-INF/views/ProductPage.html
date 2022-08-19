@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://localhost:8080/mvc-homework/product">На главную</a>
+<span>
+    <table cellspacing="5" align="center">
+        <thead>
+        <td>id</td>
+        <td>name</td>
+        </thead>
+        <tbody>
+        <tr>
+           <td><span th:text="${product.id}"></span></td>
+           <td><span th:text="${product.name}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+        <form action="#" th:action="@{update/}" method="post" th:object="${product}">
+        <input type="hidden" id="id" name="id" th:field="*{id}">
+        <label for="name">New name</label>
+        <input type="text" id="name" name="name" placeholder="Enter name of the product" th:field="*{name}">
+        <button type="submit">Update</button>
+        </form>
+
+</span>
+</body>
+</html>
