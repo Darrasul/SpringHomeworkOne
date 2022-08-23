@@ -11,6 +11,7 @@
         <module name="spring-basics-homework" />
         <module name="spring-mvc-homework" />
         <module name="spring-boot-homework" />
+        <module name="hibernate-homework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

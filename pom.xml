@@ -19,6 +19,7 @@
         <module>servlet-homework</module>
         <module>spring-basics-homework</module>
         <module>spring-mvc-homework</module>
+        <module>hibernate-homework</module>
     </modules>
 
     <dependencies>
