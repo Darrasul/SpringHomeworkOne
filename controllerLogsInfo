@@ -1,0 +1,247 @@
+2022-08-19 15:57:11.773  INFO 5420 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 5420 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 15:57:11.777  INFO 5420 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 15:57:12.937  INFO 5420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 15:57:12.951  INFO 5420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 15:57:12.952  INFO 5420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 15:57:13.075  INFO 5420 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 15:57:13.075  INFO 5420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1236 ms
+2022-08-19 15:57:13.574  INFO 5420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 15:57:13.588  INFO 5420 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.41 seconds (JVM running for 3.385)
+2022-08-19 15:57:13.658  INFO 5420 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 15:57:13.658  INFO 5420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 15:57:13.659  INFO 5420 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-08-19 16:03:54.956  INFO 7216 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 7216 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:03:54.960  INFO 7216 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:03:56.355  INFO 7216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:03:56.366  INFO 7216 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:03:56.367  INFO 7216 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:03:56.531  INFO 7216 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:03:56.533  INFO 7216 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1515 ms
+2022-08-19 16:03:57.110  INFO 7216 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:03:57.130  INFO 7216 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.7 seconds (JVM running for 3.42)
+2022-08-19 16:04:10.497  INFO 14772 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 14772 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:04:10.500  INFO 14772 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:04:11.802  INFO 14772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:04:11.813  INFO 14772 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:04:11.814  INFO 14772 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:04:11.953  INFO 14772 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:04:11.953  INFO 14772 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1369 ms
+2022-08-19 16:04:12.437  INFO 14772 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:04:12.452  INFO 14772 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.639 seconds (JVM running for 3.746)
+2022-08-19 16:04:18.725  INFO 14772 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:04:18.725  INFO 14772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:04:18.726  INFO 14772 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-08-19 16:04:38.401 ERROR 14772 --- [http-nio-8080-exec-1] com.buzas.controllers.BootController     : User has errors in update form
+2022-08-19 16:04:53.580 ERROR 14772 --- [http-nio-8080-exec-6] com.buzas.controllers.BootController     : User has errors in update form
+2022-08-19 16:05:18.647 ERROR 14772 --- [http-nio-8080-exec-8] com.buzas.controllers.BootController     : User has errors in update form
+2022-08-19 16:06:30.410  INFO 14560 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 14560 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:06:30.414  INFO 14560 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:06:31.564  INFO 14560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:06:31.575  INFO 14560 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:06:31.576  INFO 14560 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:06:31.708  INFO 14560 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:06:31.708  INFO 14560 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1232 ms
+2022-08-19 16:06:32.182  INFO 14560 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:06:32.192  INFO 14560 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.289 seconds (JVM running for 3.231)
+2022-08-19 16:06:39.561  INFO 14560 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:06:39.561  INFO 14560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:06:39.562  INFO 14560 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-19 16:06:44.788 ERROR 14560 --- [http-nio-8080-exec-3] com.buzas.controllers.BootController     : User has errors in update form
+2022-08-19 16:07:25.840 ERROR 14560 --- [http-nio-8080-exec-2] com.buzas.controllers.BootController     : User has errors in update form
+2022-08-19 16:07:34.660 ERROR 14560 --- [http-nio-8080-exec-7] com.buzas.controllers.BootController     : User has errors in update form
+2022-08-19 16:13:59.657  INFO 9492 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 9492 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:13:59.661  INFO 9492 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:14:00.871  INFO 9492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:14:00.884  INFO 9492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:14:00.885  INFO 9492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:14:01.026  INFO 9492 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:14:01.027  INFO 9492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1309 ms
+2022-08-19 16:14:01.488  INFO 9492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:14:01.504  INFO 9492 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.374 seconds (JVM running for 3.096)
+2022-08-19 16:14:26.390  INFO 9492 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:14:26.390  INFO 9492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:14:26.391  INFO 9492 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-19 16:15:52.030  INFO 11964 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 11964 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:15:52.033  INFO 11964 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:15:53.454  INFO 11964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:15:53.468  INFO 11964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:15:53.468  INFO 11964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:15:53.609  INFO 11964 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:15:53.610  INFO 11964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1514 ms
+2022-08-19 16:15:54.184  INFO 11964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:15:54.199  INFO 11964 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.773 seconds (JVM running for 3.708)
+2022-08-19 16:15:55.523  INFO 11964 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:15:55.525  INFO 11964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:15:55.526  INFO 11964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-19 16:17:45.969  INFO 15188 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 15188 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:17:45.973  INFO 15188 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:17:47.226  INFO 15188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:17:47.238  INFO 15188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:17:47.238  INFO 15188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:17:47.408  INFO 15188 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:17:47.408  INFO 15188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1374 ms
+2022-08-19 16:17:47.922  INFO 15188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:17:47.944  INFO 15188 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.508 seconds (JVM running for 3.24)
+2022-08-19 16:17:50.026  INFO 15188 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:17:50.027  INFO 15188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:17:50.029  INFO 15188 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-19 16:18:59.841  INFO 13416 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 13416 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:18:59.844  INFO 13416 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:19:01.027  INFO 13416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:19:01.039  INFO 13416 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:19:01.039  INFO 13416 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:19:01.173  INFO 13416 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:19:01.174  INFO 13416 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
+2022-08-19 16:19:01.658  INFO 13416 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:19:01.669  INFO 13416 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.336 seconds (JVM running for 3.078)
+2022-08-19 16:19:04.637  INFO 13416 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:19:04.638  INFO 13416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:19:04.639  INFO 13416 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2022-08-19 16:19:07.001 ERROR 13416 --- [http-nio-8080-exec-3] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/SpringBoot] threw exception [Request processing failed; nested exception is javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'price'] with root cause
+
+javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'price'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:54) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:109) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:933) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:382) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:173) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-08-19 16:19:19.976 ERROR 13416 --- [http-nio-8080-exec-6] o.a.c.c.C.[.[.[.[dispatcherServlet]      : Servlet.service() for servlet [dispatcherServlet] in context with path [/SpringBoot] threw exception [Request processing failed; nested exception is javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'price'] with root cause
+
+javax.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'javax.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'price'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:54) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-6.2.4.Final.jar:6.2.4.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:109) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:66) ~[spring-boot-autoconfigure-2.7.3.jar:2.7.3]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:933) ~[spring-context-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.validateIfApplicable(ModelAttributeMethodProcessor.java:382) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.annotation.ModelAttributeMethodProcessor.resolveArgument(ModelAttributeMethodProcessor.java:173) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1070) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:963) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:681) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) ~[spring-webmvc-5.3.22.jar:5.3.22]
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:764) ~[tomcat-embed-core-9.0.65.jar:4.0.FR]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.22.jar:5.3.22]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:890) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1789) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.65.jar:9.0.65]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-08-19 16:19:52.662  INFO 9964 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 9964 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 16:19:52.667  INFO 9964 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 16:19:53.934  INFO 9964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 16:19:53.946  INFO 9964 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 16:19:53.946  INFO 9964 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 16:19:54.070  INFO 9964 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 16:19:54.071  INFO 9964 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1342 ms
+2022-08-19 16:19:54.790  INFO 9964 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 16:19:54.805  INFO 9964 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.733 seconds (JVM running for 3.595)
+2022-08-19 16:19:54.930  INFO 9964 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 16:19:54.931  INFO 9964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 16:19:54.932  INFO 9964 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms

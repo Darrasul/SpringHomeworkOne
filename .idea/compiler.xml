@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,10 +10,16 @@
         <module name="servlet-homework" />
         <module name="spring-basics-homework" />
         <module name="spring-mvc-homework" />
+        <module name="spring-boot-homework" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mvc-homework" target="17" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-homework" options="-parameters" />
+    </option>
   </component>
 </project>

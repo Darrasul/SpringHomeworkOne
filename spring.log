@@ -1,0 +1,13 @@
+2022-08-19 13:34:28.665  INFO 9568 --- [main] com.buzas.SpringBootHomeworkApplication  : Starting SpringBootHomeworkApplication using Java 17.0.2 on DESKTOP-KA7I0HQ with PID 9568 (D:\Work\Learning\Projects\homework\SpringHomeworkOne\spring-boot-homework\target\classes started by Vito in D:\Work\Learning\Projects\homework\SpringHomeworkOne)
+2022-08-19 13:34:28.668  INFO 9568 --- [main] com.buzas.SpringBootHomeworkApplication  : No active profile set, falling back to 1 default profile: "default"
+2022-08-19 13:34:29.750  INFO 9568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-08-19 13:34:29.765  INFO 9568 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-08-19 13:34:29.766  INFO 9568 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-08-19 13:34:29.891  INFO 9568 --- [main] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring embedded WebApplicationContext
+2022-08-19 13:34:29.892  INFO 9568 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1168 ms
+2022-08-19 13:34:30.356  INFO 9568 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '/SpringBoot'
+2022-08-19 13:34:30.367  INFO 9568 --- [main] com.buzas.SpringBootHomeworkApplication  : Started SpringBootHomeworkApplication in 2.228 seconds (JVM running for 2.926)
+2022-08-19 13:34:34.612  INFO 9568 --- [http-nio-8080-exec-1] o.a.c.c.C.[.[localhost].[/SpringBoot]    : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-08-19 13:34:34.613  INFO 9568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-08-19 13:34:34.614  INFO 9568 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-08-19 13:34:34.635  INFO 9568 --- [http-nio-8080-exec-1] com.buzas.controllers.BootController     : User open main page
