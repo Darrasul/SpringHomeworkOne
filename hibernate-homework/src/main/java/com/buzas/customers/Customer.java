@@ -29,8 +29,7 @@ public class Customer {
     @OneToMany(
             mappedBy = "customer",
             cascade = {CascadeType.PERSIST, CascadeType.REMOVE, CascadeType.MERGE},
-            orphanRemoval = true,
-            fetch = FetchType.EAGER
+            orphanRemoval = true
     )
     private List<Order> orders;
 
