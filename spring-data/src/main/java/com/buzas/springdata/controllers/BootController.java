@@ -1,9 +1,10 @@
 package com.buzas.springdata.controllers;
 
-import com.buzas.springdata.products.Product;
-import com.buzas.springdata.products.ProductRepository;
+import com.buzas.springdata.products.ProductDto;
+import com.buzas.springdata.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.domain.Page;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -13,6 +14,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.validation.Valid;
 import java.lang.module.FindException;
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -21,7 +23,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BootController {
 
-    private final ProductRepository productRepo;
+    private final ProductService productService;
 //    Использовал для инициализации базы
 //    @PostConstruct
 //    public void init() {
@@ -45,19 +47,27 @@ public class BootController {
     @GetMapping("product")
     public ModelAndView getAllProducts(@RequestParam(required = false) Double minimumFilter,
                                        @RequestParam(required = false) Double maximumFilter,
+                                       @RequestParam(required = false, defaultValue = "1") Optional<Integer> page,
+                                       @RequestParam(required = false, defaultValue = "10") Optional<Integer> size,
                                        Model model) {
-        model.addAttribute("products", productRepo.findAllByFilters(maximumFilter, minimumFilter));
+        int currentPage = page.orElse(1) - 1;
+        int sizeValue = size.orElse(10);
+        Page<ProductDto> dtoPage = productService.findAllByFilters(minimumFilter, maximumFilter, currentPage, sizeValue);
+        model.addAttribute("products", dtoPage);
+        model.addAttribute("lastPage", dtoPage.getTotalPages());
+        model.addAttribute("firstPage", 1);
+        model.addAttribute("currentPage", (currentPage + 1));
         return new ModelAndView("ProductsPage");
     }
 
     @GetMapping("product/{id}")
     public ModelAndView getProduct(@PathVariable("id") long id, Model model) {
-        model.addAttribute("product", productRepo.findById(id).orElseThrow(() -> new FindException("No such product")));
+        model.addAttribute("product", productService.findById(id).orElseThrow(() -> new FindException("No such product")));
         return new ModelAndView("ProductPage");
     }
 
     @PostMapping("product/create")
-    public ModelAndView createProduct(@Valid Product product, BindingResult result) {
+    public ModelAndView createProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
 //        Нахожусь в ветке 7 урока, где обнаружил ошибку: по какой-то причине не работает валидация.
 //        Причем не работает от слова совсем: result присылает полностью пустой вариант без единой
 //        ошибки даже когда все поля пустые.
@@ -82,19 +92,19 @@ public class BootController {
             }
             return new ModelAndView("ProductPage");
         }
-        productRepo.saveAndFlush(product);
+        productService.save(productDto);
         return new ModelAndView("ProductPage");
     }
 
     @GetMapping("product/new")
     public ModelAndView getNewProductForm(Model model) {
-        model.addAttribute("product", new Product());
+        model.addAttribute("product", new ProductDto());
         return new ModelAndView("NewProductPage");
     }
 
 
     @PostMapping("product/update/")
-    public ModelAndView updateProduct(@Valid Product product, BindingResult result) {
+    public ModelAndView updateProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
         if (result.hasErrors()) {
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
@@ -105,20 +115,19 @@ public class BootController {
             }
             return new ModelAndView("ProductPage");
         }
-        productRepo.saveAndFlush(product);
+        productService.save(productDto);
         return new ModelAndView("ProductPage");
     }
 
     @PostMapping("product/delete/{id}")
     public ModelAndView deleteProductPost(@PathVariable("id") long id) {
-        Product product = productRepo.findById(id).orElseThrow(() -> new FindException("There is no such product"));
-        productRepo.delete(product);
+        productService.deleteById(id);
         return new ModelAndView("ProductsPage");
     }
 
     @PostMapping("product/delete/all")
     public ModelAndView deleteAllProductsPost() {
-        productRepo.deleteAll();
+        productService.deleteAll();
         return new ModelAndView("ProductsPage");
     }
 

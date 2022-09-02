@@ -57,6 +57,35 @@
     </tr>
     </tbody>
 </table>
+    <div th:unless="${products.isEmpty()}">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+
+                <li class="page-item" >
+                    <a class="page-link" href="#"
+                       th:href="@{/product(page=${currentPage - 1}, size=${products.size})}"
+                    th:if="${currentPage != firstPage} ? 'disabled'">Previous</a>
+                    <a th:if="${currentPage != firstPage} ? 'active'">This is first page</a>
+                </li>
+
+                <li th:each="num : ${#numbers.sequence(1, products.totalPages)}"
+                    th:classapend="${num == products.number + 1} ? 'active'"
+                    class="page-item">
+                    <a class="page-link" href="#" th:href="@{/product(page=${num}, size=${products.size})}">[[${num}]]
+                        <span th:if="${num == products.number + 1}">(current)</span>
+                    </a>
+                </li>
+
+                <li class="page-item" >
+                    <a class="page-link" href="#"
+                       th:href="@{/product(page=${currentPage + 1}, size=${products.size})}"
+                    th:if="${currentPage != lastPage} ? 'disabled'">Next</a>
+                    <a th:if="${currentPage != lastPage} ? 'active'">This is last page</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
     <div>
         <a th:href="@{/product/new}">Add new product</a>
     </div>
