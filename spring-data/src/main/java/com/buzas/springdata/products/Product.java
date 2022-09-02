@@ -22,7 +22,7 @@ public class Product {
 
     @Min(value = 0, message = "price too low")
     @Max(value = 500, message = "price too big")
-    @NotBlank(message = "Specify the price")
+    @NotNull(message = "Specify the price")
     @Column(nullable = false)
     private Double price;
     @NotBlank(message = "Specify the currency")
