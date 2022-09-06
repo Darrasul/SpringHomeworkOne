@@ -12,11 +12,13 @@
     <form>
         <div>
             <label for="minimumFilter">Minimum Price</label>
-            <input type="text" id="minimumFilter" name="minimumFilter" placeholder="min price">
+            <input type="text" id="minimumFilter" name="minimumFilter" placeholder="min price"
+            th:value="${param.minimumFilter}">
         </div>
         <div>
             <label for="maximumFilter">Maximum Price</label>
-            <input type="text" id="maximumFilter" name="maximumFilter" placeholder="max price">
+            <input type="text" id="maximumFilter" name="maximumFilter" placeholder="max price"
+            th:value="${param.maximumFilter}">
         </div>
         <button type="submit">Apply filters</button>
     </form>
@@ -57,6 +59,35 @@
     </tr>
     </tbody>
 </table>
+    <div th:unless="${products.isEmpty()}">
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+
+                <li class="page-item" >
+                    <a class="page-link" href="#"
+                       th:href="@{/product(minimumFilter=${param.minimumFilter}, maximumFilter=${param.maximumFilter}, page=${products.number}, size=${products.size})}"
+                    th:if="${!products.isFirst} ? 'disabled'">Previous</a>
+                    <a th:if="${!products.isFirst} ? 'active'">This is first page</a>
+                </li>
+
+                <li th:each="num : ${#numbers.sequence(1, products.totalPages)}"
+                    th:classapend="${num == products.number + 1} ? 'active'"
+                    class="page-item">
+                    <a class="page-link" href="#" th:href="@{/product(minimumFilter=${param.minimumFilter}, maximumFilter=${param.maximumFilter}, page=${num}, size=${products.size})}">[[${num}]]
+                        <span th:if="${num == products.number + 1}">(current)</span>
+                    </a>
+                </li>
+
+                <li class="page-item" >
+                    <a class="page-link" href="#"
+                       th:href="@{/product(minimumFilter=${param.minimumFilter}, maximumFilter=${param.maximumFilter}, page=${products.number + 2}, size=${products.size})}"
+                    th:if="${!products.isLast} ? 'disabled'">Next</a>
+                    <a th:if="${!products.isLast} ? 'active'">This is last page</a>
+                </li>
+
+            </ul>
+        </nav>
+    </div>
     <div>
         <a th:href="@{/product/new}">Add new product</a>
     </div>

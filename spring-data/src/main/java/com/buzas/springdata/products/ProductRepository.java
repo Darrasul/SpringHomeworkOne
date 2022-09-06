@@ -1,13 +1,16 @@
 package com.buzas.springdata.products;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.querydsl.QuerydslPredicateExecutor;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 @Repository
-public interface ProductRepository extends JpaRepository<Product, Long> {
+public interface ProductRepository extends JpaRepository<Product, Long>, QuerydslPredicateExecutor<Product> {
 
     List<Product> findAllByPriceLessThanEqual(Double maximumFilter);
     List<Product> findAllByPriceGreaterThanEqual(Double minimumFilter);
@@ -17,7 +20,11 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
         select * from product p
         where (:maximumFilter is null or p.price <= :maximumFilter)
         and (:minimumFilter is null or p.price >= :minimumFilter)
-""", nativeQuery = true
+""", countQuery = """
+        select count(*) from product p
+        where (:maximumFilter is null or p.price <= :maximumFilter)
+        and (:minimumFilter is null or p.price >= :minimumFilter)
+""",nativeQuery = true
     )
-    List<Product> findAllByFilters(Double maximumFilter, Double minimumFilter);
+    Page<Product> findAllByFilters(Double maximumFilter, Double minimumFilter, Pageable pageable);
 }
