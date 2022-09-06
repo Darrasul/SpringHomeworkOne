@@ -123,4 +123,15 @@ public class BootController {
         return new ModelAndView("ProductsPage");
     }
 
+    @GetMapping("/api/v1/product")
+    public List<ProductDto> listOfProduct(@RequestParam(required = false) Double minimumFilter,
+                                          @RequestParam(required = false) Double maximumFilter) {
+        return productService.findAllByFiltersV2(minimumFilter, maximumFilter);
+    }
+
+    @GetMapping("/api/v1/product/{id}")
+    public ProductDto productPage(@PathVariable("id") long id){
+        return productService.findById(id).orElseThrow(() -> new FindException("No such product, wrong id: " + id));
+    }
+
 }

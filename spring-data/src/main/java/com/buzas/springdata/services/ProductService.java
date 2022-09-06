@@ -8,7 +8,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -20,6 +22,11 @@ public class ProductService {
     public Page<ProductDto> findAllByFilters(Double minimumFilter, Double maximumFilter, int page, int size) {
         return productRepo.findAllByFilters(
                 maximumFilter, minimumFilter, PageRequest.of(page, size)).map(mapper::map);
+    }
+
+    public List<ProductDto> findAllByFiltersV2(Double minimumFilter, Double maximumFilter) {
+        return productRepo.findAllByFiltersV2(minimumFilter, maximumFilter)
+                .stream().map(mapper::map).collect(Collectors.toList());
     }
 
     public Optional<ProductDto> findById(Long id) {
