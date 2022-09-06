@@ -6,6 +6,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.*;
+import java.math.BigDecimal;
 
 @Entity
 @Getter
@@ -22,8 +23,8 @@ public class Product {
     @Column(length = 1024)
     private String name;
 
-    @Min(value = 0, message = "price too low")
-    @Max(value = 500, message = "price too big")
+    @DecimalMin(value = "0.01", message = "price too low")
+    @DecimalMin(value = "500.00", message = "price too big")
     @NotNull(message = "Specify the price")
     @Column(nullable = false)
     private Double price;

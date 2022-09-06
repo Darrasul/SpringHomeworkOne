@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.*;
+import java.math.BigDecimal;
 
 @Getter
 @Setter
@@ -16,15 +17,15 @@ public class ProductDto {
     @Size(min = 3, message = "Name too short")
     private String name;
 
-    @Min(value = 0, message = "price too low")
-    @Max(value = 500, message = "price too big")
+    @DecimalMin(value = "0.01", message = "price too low")
+    @DecimalMin(value = "500.00", message = "price too big")
     @NotNull(message = "Specify the price")
-    private Double price;
+    private BigDecimal price;
 
     @NotBlank(message = "Specify the currency")
     private String currency;
 
-    public ProductDto(String name, Double price, String currency) {
+    public ProductDto(String name, BigDecimal price, String currency) {
         this.name = name;
         this.price = price;
         this.currency = currency;

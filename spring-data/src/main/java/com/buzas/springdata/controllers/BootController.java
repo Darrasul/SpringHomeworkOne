@@ -54,9 +54,6 @@ public class BootController {
         int sizeValue = size.orElse(10);
         Page<ProductDto> dtoPage = productService.findAllByFilters(minimumFilter, maximumFilter, currentPage, sizeValue);
         model.addAttribute("products", dtoPage);
-        model.addAttribute("lastPage", dtoPage.getTotalPages());
-        model.addAttribute("firstPage", 1);
-        model.addAttribute("currentPage", (currentPage + 1));
         return new ModelAndView("ProductsPage");
     }
 
@@ -68,19 +65,10 @@ public class BootController {
 
     @PostMapping("product/create")
     public ModelAndView createProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
-//        Нахожусь в ветке 7 урока, где обнаружил ошибку: по какой-то причине не работает валидация.
-//        Причем не работает от слова совсем: result присылает полностью пустой вариант без единой
-//        ошибки даже когда все поля пустые.
-//        Перепробовал все варианты с валидацией на стороне Product, так же попытался отлавливать здесь через
-//        result.hasGlobalErrors(). Проверил заполнение на стороне html страниц, попробовал добавить
-//        @ModelAttribute("product") для product. Даже попробовал вариант с Model model и дальнейшим
-//        model.addAttribute("product", product);
-//        ни один из вариантов не помог решить проблему на данном этапе приступаю к выполнению задания 8'го урока
-//        после выполнения д\з буду пытаться починить валидацию: решение проблемы уже будет находиться в ветке следующего урока
-        System.out.println(result.getTarget());
-        System.out.println(result.hasErrors());
-        System.out.println(result.getGlobalErrorCount());
-        System.out.println(result.getModel());
+        System.out.println("Target: " + result.getTarget());
+        System.out.println("Is there some errors: " + result.hasErrors());
+        System.out.println("Count of errors: " + result.getGlobalErrorCount());
+        System.out.println("Model:\n" + result.getModel());
 
         if (result.hasErrors()) {
             List<FieldError> errors = result.getFieldErrors();
@@ -105,6 +93,10 @@ public class BootController {
 
     @PostMapping("product/update/")
     public ModelAndView updateProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
+        System.out.println("Target: " + result.getTarget());
+        System.out.println("Is there some errors: " + result.hasErrors());
+        System.out.println("Count of errors: " + result.getGlobalErrorCount());
+        System.out.println("Model:\n" + result.getModel());
         if (result.hasErrors()) {
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
