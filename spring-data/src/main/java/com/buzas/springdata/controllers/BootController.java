@@ -70,7 +70,9 @@ public class BootController {
         System.out.println("Count of errors: " + result.getGlobalErrorCount());
         System.out.println("Model:\n" + result.getModel());
 
-        if (result.hasErrors()) {
+        if (result.hasErrors() ||
+                productDto.getPrice() == null || productDto.getName().equals("") || productDto.getCurrency().equals("")) {
+            checkForErrors(productDto, result);
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
                 System.out.println(error.getObjectName() + " has next error on " + error.getField() + " :"
@@ -97,7 +99,10 @@ public class BootController {
         System.out.println("Is there some errors: " + result.hasErrors());
         System.out.println("Count of errors: " + result.getGlobalErrorCount());
         System.out.println("Model:\n" + result.getModel());
-        if (result.hasErrors()) {
+
+        if (result.hasErrors() ||
+                productDto.getPrice() == null || productDto.getName().equals("") || productDto.getCurrency().equals("")) {
+            checkForErrors(productDto, result);
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
                 System.out.println(error.getObjectName() + " has next error on " + error.getField() + " :"
@@ -132,6 +137,18 @@ public class BootController {
     @GetMapping("/api/v1/product/{id}")
     public ProductDto productPage(@PathVariable("id") long id){
         return productService.findById(id).orElseThrow(() -> new FindException("No such product, wrong id: " + id));
+    }
+
+    private void checkForErrors(@ModelAttribute("product") @Valid ProductDto productDto, BindingResult result) {
+        if (productDto.getPrice() == null){
+            result.addError(new FieldError(productDto.getClass().toString(), "price", "wrong price"));
+        }
+        if (productDto.getName().equals("")){
+            result.addError(new FieldError(productDto.getClass().toString(), "name", "wrong name"));
+        }
+        if (productDto.getCurrency().equals("")){
+            result.addError(new FieldError(productDto.getClass().toString(), "currency", "wrong currency"));
+        }
     }
 
 }
