@@ -73,7 +73,10 @@ public class BootController {
 
         if (result.hasErrors() ||
                 productDto.getPrice() == null || productDto.getName().equals("") ||
-                productDto.getName().length() <= 3 || productDto.getCurrency().equals("")) {
+                productDto.getName().length() <= 3 || productDto.getCurrency().equals("")||
+                productDto.getPrice().compareTo(BigDecimal.valueOf(0.01)) == -1 && productDto.getPrice() != null ||
+                productDto.getPrice().compareTo(BigDecimal.valueOf(500.00)) == 1 && productDto.getPrice() != null
+        ) {
             checkForErrors(productDto, result);
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
@@ -104,7 +107,10 @@ public class BootController {
 
         if (result.hasErrors() ||
                 productDto.getPrice() == null || productDto.getName().equals("") ||
-                productDto.getName().length() <= 3 || productDto.getCurrency().equals("")) {
+                productDto.getName().length() <= 3 || productDto.getCurrency().equals("") ||
+                productDto.getPrice().compareTo(BigDecimal.valueOf(0.01)) == -1 && productDto.getPrice() != null ||
+                productDto.getPrice().compareTo(BigDecimal.valueOf(500.00)) == 1 && productDto.getPrice() != null
+        ) {
             checkForErrors(productDto, result);
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
