@@ -1,0 +1,34 @@
+<div class="container">
+  <div align="center">
+    <table border="1">
+      <thead align="center">
+      <td>id</td>
+      <td>name</td>
+      <td>price</td>
+      <td>currency</td>
+      <td>buttons</td>
+      </thead>
+      <tbody align="center">
+      <tr>
+      <tr *ngFor="let product of products">
+        <td>
+          <span>{{product.id}}</span>
+        </td>
+        <td>
+          <span>{{product.name}}</span>
+        </td>
+        <td>
+          <span>{{product.price}}</span>
+        </td>
+        <td>
+          <span>{{product.currency}}</span>
+        </td>
+        <td>
+          <a class="btn btn-success" routerLink="/product/{{product.id}}"><i class="fas fa-edit"></i></a>
+          <a class="btn btn-danger" (click)="delete(product.id)"><i class="far fa-trash-alt"></i></a>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
