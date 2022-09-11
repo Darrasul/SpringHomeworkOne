@@ -12,6 +12,7 @@
         <module name="spring-mvc-homework" />
         <module name="spring-boot-homework" />
         <module name="hibernate-homework" />
+        <module name="angularJS-homework" />
       </profile>
       <profile name="Annotation profile for spring-data" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
@@ -31,6 +32,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="angularJS-homework" options="-parameters" />
       <module name="spring-boot-homework" options="-parameters" />
       <module name="spring-data" options="-parameters" />
     </option>
