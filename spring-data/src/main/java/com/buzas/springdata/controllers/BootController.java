@@ -13,6 +13,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
 import java.lang.module.FindException;
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.Optional;
 
@@ -71,7 +72,8 @@ public class BootController {
         System.out.println("Model:\n" + result.getModel());
 
         if (result.hasErrors() ||
-                productDto.getPrice() == null || productDto.getName().equals("") || productDto.getCurrency().equals("")) {
+                productDto.getPrice() == null || productDto.getName().equals("") ||
+                productDto.getName().length() <= 3 || productDto.getCurrency().equals("")) {
             checkForErrors(productDto, result);
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
@@ -80,7 +82,7 @@ public class BootController {
                 log.warn("User" + error.getObjectName() + " has errors in create form with "  + error.getField() + " :"
                         + error.getDefaultMessage());
             }
-            return new ModelAndView("ProductPage");
+            return new ModelAndView("NewProductPage");
         }
         productService.save(productDto);
         return new ModelAndView("ProductPage");
@@ -101,7 +103,8 @@ public class BootController {
         System.out.println("Model:\n" + result.getModel());
 
         if (result.hasErrors() ||
-                productDto.getPrice() == null || productDto.getName().equals("") || productDto.getCurrency().equals("")) {
+                productDto.getPrice() == null || productDto.getName().equals("") ||
+                productDto.getName().length() <= 3 || productDto.getCurrency().equals("")) {
             checkForErrors(productDto, result);
             List<FieldError> errors = result.getFieldErrors();
             for (FieldError error : errors) {
@@ -141,13 +144,22 @@ public class BootController {
 
     private void checkForErrors(@ModelAttribute("product") @Valid ProductDto productDto, BindingResult result) {
         if (productDto.getPrice() == null){
-            result.addError(new FieldError(productDto.getClass().toString(), "price", "wrong price"));
+            result.addError(new FieldError(productDto.getClass().toString(), "price", "You must specify the price"));
+        }
+        if (productDto.getPrice().compareTo(BigDecimal.valueOf(0.01)) == -1 && productDto.getPrice() != null) {
+            result.addError(new FieldError(productDto.getClass().toString(), "price", "Price need to be bigger then 0.01"));
+        }
+        if (productDto.getPrice().compareTo(BigDecimal.valueOf(500.00)) == 1 && productDto.getPrice() != null) {
+            result.addError(new FieldError(productDto.getClass().toString(), "price", "Price need to be smaller then 500.00"));
         }
         if (productDto.getName().equals("")){
-            result.addError(new FieldError(productDto.getClass().toString(), "name", "wrong name"));
+            result.addError(new FieldError(productDto.getClass().toString(), "name", "You must specify the name"));
+        }
+        if (productDto.getName().length() <= 3 && !productDto.getName().equals("")){
+            result.addError(new FieldError(productDto.getClass().toString(), "name", "Name need to be longer then 3 symbols"));
         }
         if (productDto.getCurrency().equals("")){
-            result.addError(new FieldError(productDto.getClass().toString(), "currency", "wrong currency"));
+            result.addError(new FieldError(productDto.getClass().toString(), "currency", "You must specify the currency"));
         }
     }
 
