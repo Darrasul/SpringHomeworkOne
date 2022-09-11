@@ -27,7 +27,7 @@ public class Product {
     @DecimalMin(value = "500.00", message = "price too big")
     @NotNull(message = "Specify the price")
     @Column(nullable = false)
-    private Double price;
+    private BigDecimal price;
 
     @NotBlank(message = "Specify the currency")
     @Column(nullable = false, length = 1024)
@@ -38,7 +38,7 @@ public class Product {
         this.name = name;
     }
 
-    public Product(String name, Double  price, String currency) {
+    public Product(String name, BigDecimal  price, String currency) {
         this.name = name;
         this.price = price;
         this.currency = currency;

@@ -27,4 +27,12 @@ public interface ProductRepository extends JpaRepository<Product, Long>, Queryds
 """,nativeQuery = true
     )
     Page<Product> findAllByFilters(Double maximumFilter, Double minimumFilter, Pageable pageable);
+
+    @Query(value = """
+        select * from product p
+        where (:maximumFilter is null or p.price <= :maximumFilter)
+        and (:minimumFilter is null or p.price >= :minimumFilter)
+""",nativeQuery = true
+    )
+    List<Product> findAllByFiltersV2(Double maximumFilter, Double minimumFilter);
 }
