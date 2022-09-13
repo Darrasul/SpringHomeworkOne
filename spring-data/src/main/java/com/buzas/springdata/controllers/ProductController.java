@@ -22,22 +22,11 @@ import java.util.Optional;
 @Slf4j
 @RequestMapping("/")
 @RequiredArgsConstructor
-public class BootController {
+public class ProductController {
 
     private final ProductService productService;
-//    Использовал для инициализации базы
-//    @PostConstruct
-//    public void init() {
-//        productRepo.saveAndFlush(new Product("Product #6", 113.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #7", 250.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #8", 275.75, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #9", 120.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #10", 37.0, "dollars"));
-//        productRepo.saveAndFlush(new Product("Product #11", 37.5, "dollars"));
-//        productRepo.saveAndFlush(new Product("Product #12", 240.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #13", 230.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #14", 50.0, "rubles"));
-//    }
+
+//    http://localhost:8080/SpringData/swagger-ui/index.html
 
     @GetMapping
     public ModelAndView getMainPage() {

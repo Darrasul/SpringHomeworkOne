@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="http://localhost:8080/SpringData/">На главную</a>
+<span>
+    <table cellspacing="5" align="center">
+        <thead>
+            <td>id</td>
+            <td>name</td>
+        </thead>
+        <tbody>
+        <tr>
+           <td><span th:text="${user.id}"></span></td>
+           <td><span th:text="${user.username}"></span></td>
+        </tr>
+        </tbody>
+    </table>
+        <form action="#" th:action="@{/users/new}" method="post" th:object="${user}">
+            <input type="hidden" id="id" name="id" th:field="*{id}">
+            <div>
+               <label for="username">New name</label>
+                <p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+                <input type="text" id="username" name="username" placeholder="Enter username of the product" th:field="*{username}">
+            </div>
+            <div>
+                <label for="password">New password</label>
+                <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></p>
+                <input type="text" id="password" name="password" placeholder="Enter password of the user" th:field="*{password}">
+            </div>
+        <button type="submit">Create</button>
+        </form>
+
+</span>
+</body>
+</html>
