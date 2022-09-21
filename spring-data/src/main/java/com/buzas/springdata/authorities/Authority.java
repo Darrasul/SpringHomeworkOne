@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -23,9 +23,9 @@ public class Authority {
     private String authority;
 
     @ManyToMany(mappedBy = "authorities")
-    private List<User> users;
+    private Set<User> users;
 
-    public Authority(String authority, List<User> users) {
+    public Authority(String authority, Set<User> users) {
         this.authority = authority;
         this.users = users;
     }
@@ -39,9 +39,6 @@ public class Authority {
 
     @Override
     public String toString() {
-        return "Authority{" +
-                "id=" + id +
-                ", authority='" + authority + '\'' +
-                '}';
+        return authority.substring(5) + "(" + id + ")";
     }
 }

@@ -11,7 +11,6 @@ public interface UserDtoMapper {
 
     @Mapping(target = "id", ignore = true)
     @Mapping(source = "password", target = "password", qualifiedByName = "encode")
-    @Mapping(target = "authorities", ignore = true)
     User map(UserDto userDto, @Context PasswordEncoder encoder);
 
     @Named("encode")

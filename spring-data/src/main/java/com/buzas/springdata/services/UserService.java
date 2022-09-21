@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 import java.lang.module.FindException;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -37,11 +38,22 @@ public class UserService {
                 .map(user -> new org.springframework.security.core.userdetails.User(
                         user.getUsername(),
                         user.getPassword(),
-                        Collections.singletonList(new SimpleGrantedAuthority("ADMIN"))
+                        user.getAuthorities().stream()
+                                .map(authority -> new SimpleGrantedAuthority(authority.getAuthority()))
+                                .collect(Collectors.toList())
                 )).orElseThrow(() -> new UsernameNotFoundException(username));
     }
 
     public void save(UserDto userDto) {
+        userRepo.save(mapper.map(userDto, encoder));
+    }
+
+//    За два часа сам не смог решить проблему и оставил костыль. Пересмотрев урок, понял, что на нём тоже не было решения:
+//    у учителя просто сохраняется новый пользователь при попытке обновить информацию. Метод save же не дает обновить
+//    информацию о пользователе. Т.к. я так и не смог понять, как грамотно обновить в данном случае пользователя, оставил
+//    метод, который просто удаляет пользователя со старыми данными и перезаписывает его новым
+    public void update(UserDto userDto) {
+        userRepo.deleteById(userDto.getId());
         userRepo.save(mapper.map(userDto, encoder));
     }
 

@@ -1,12 +1,12 @@
 package com.buzas.springdata.users;
 
-import com.buzas.springdata.authorities.AuthorityDto;
+import com.buzas.springdata.authorities.Authority;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
-import java.util.List;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -22,6 +22,8 @@ public class UserDto {
     private String password;
 
     private boolean enabled;
+
+    private Set<Authority> authorities;
 
     public UserDto(String username, String password, boolean enabled) {
         this.username = username;

@@ -4,6 +4,9 @@ server:
     context-path: /SpringData
 logging:
   level:
+    org:
+      springframework:
+        security: debug
     com:
       buzas:
         springdata:

@@ -22,7 +22,7 @@
         </tr>
         </tbody>
     </table>
-        <form action="#" th:action="@{/users/new}" method="post" th:object="${user} " sec:authorize="hasAnyRole('ROLE_MainAdmin')">
+        <form action="#" th:action="@{/users/update}" method="post" th:object="${user}" sec:authorize="hasAnyRole('ROLE_MainAdmin')">
             <input type="hidden" id="id" name="id" th:field="*{id}">
             <div>
                <label for="username">New name</label>
@@ -43,7 +43,7 @@
                     </option>
                 </select>
             </div>
-        <button type="submit">Create</button>
+        <button type="submit" sec:authorize="hasAnyRole('ROLE_MainAdmin')">Update</button>
         </form>
 
 </span>

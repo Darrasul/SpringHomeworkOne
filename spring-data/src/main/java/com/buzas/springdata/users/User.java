@@ -7,7 +7,7 @@ import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import java.util.List;
+import java.util.Set;
 
 @Entity
 @Getter
@@ -31,17 +31,17 @@ public class User {
     @Column(nullable = false)
     private boolean enabled;
 
-    @ManyToMany
-    private List<Authority> authorities;
+    @ManyToMany(fetch = FetchType.EAGER)
+    private Set<Authority> authorities;
 
-    public User(String username, String password, boolean enabled, List<Authority> authorities) {
+    public User(String username, String password, boolean enabled, Set<Authority> authorities) {
         this.username = username;
         this.password = password;
         this.enabled = enabled;
         this.authorities = authorities;
     }
 
-    public User(String username, String password, List<Authority> authorities) {
+    public User(String username, String password, Set<Authority> authorities) {
         this.username = username;
         this.password = password;
         this.enabled = true;
@@ -61,14 +61,5 @@ public class User {
     }
 
     public User() {
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + getUsername() + '\'' +
-                ", enabled=" + enabled +
-                '}';
     }
 }
