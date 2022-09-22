@@ -1,6 +1,7 @@
 package com.buzas.springdata.users;
 
 import com.buzas.springdata.authorities.Authority;
+import com.buzas.springdata.orders.Order;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -34,6 +35,10 @@ public class User {
     @ManyToMany(fetch = FetchType.EAGER)
     private Set<Authority> authorities;
 
+    @OneToMany(cascade = CascadeType.ALL,
+            orphanRemoval = true)
+    private Set<Order> orders;
+
     public User(String username, String password, boolean enabled, Set<Authority> authorities) {
         this.username = username;
         this.password = password;
@@ -61,5 +66,13 @@ public class User {
     }
 
     public User() {
+    }
+
+    public void addOrder(Order order) {
+        orders.add(order);
+    }
+
+    public void removeOrder(Order order) {
+        orders.remove(order);
     }
 }

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org "
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products</title>
+</head>
+<body>
+<a href="http://localhost:8080/SpringData">Главная</a>
+<div align="center">
+<table border="1">
+    <thead align="center">
+    <td>id</td>
+    <td>name</td>
+    <td>price</td>
+    <td>currency</td>
+    <td sec:authorize="hasAnyRole('ROLE_User')">buttons</td>
+    </thead>
+    <tbody align="center">
+    <tr th:each="item : ${order}">
+        <td>
+            <span th:text="${item.id}"></span>
+        </td>
+        <td>
+            <span th:text="${item.product}"></span>
+        </td>
+        <td>
+            <span th:text="${item.cost}"></span>
+        </td>
+        <td>
+            <span th:text="${item.currency}"></span>
+        </td>
+        <td sec:authorize="hasAnyRole('ROLE_User')">
+            <form action="#" th:action="@{/users/order/delete(itemId=${item.id}, orderId=${orderId})}" method="post">
+            <input type="hidden" id="id_delete" name="id" th:object="${item.id}">
+            <input type="hidden" id="order_id" name="id" th:object="${orderId}">
+            <button type="submit">Delete</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+    <div>
+<!--        Я потратил 2.5 часа, пытаясь сделать кнопку и поле, передающее туда параметр, у меня так и не получилось
+ заставить их работать, потому я просто добавил кнопку, добавляющую определенный предмет-->
+        <form action="#" th:action="@{/users/order/(id=${orderId}, itemId=5)}" method="post">
+            <label>New item</label>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

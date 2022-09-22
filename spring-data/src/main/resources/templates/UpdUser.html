@@ -8,7 +8,9 @@
 <body>
 <a href="http://localhost:8080/SpringData/">На главную</a>
 <span>
+    <div>
     <table cellspacing="5" align="center">
+        <h3 align="center">User</h3>
         <thead>
             <td>id</td>
             <td>name</td>
@@ -22,6 +24,40 @@
         </tr>
         </tbody>
     </table>
+        </div>
+    <div>
+    <h3 align="center">Orders</h3>
+    <table cellspacing="5" align="center">
+        <thead>
+            <td>id</td>
+            <td>items</td>
+            <td>total cost</td>
+            <td>actions</td>
+        </thead>
+        <tbody>
+        <tr th:each="order : ${orders}">
+            <td>
+                <span th:text="${order.id}"></span>
+            </td>
+            <td>
+                <span th:text="${order.orderedItems}"></span>
+            </td>
+            <td>
+                <span th:text="${order.totalPrice}"></span>
+            </td>
+            <td>
+                <form action="#" th:action="'order/' + ${order.id}" method="get">
+                    <input type="hidden" id="order_sum" name="order_sum" th:object="${order.id}">
+                    <button type="submit">inspect</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+        </div>
+    <div>
+    <h1 align="center">Update user</h1>
+        <div th:align="center">
         <form action="#" th:action="@{/users/update}" method="post" th:object="${user}" sec:authorize="hasAnyRole('ROLE_MainAdmin')">
             <input type="hidden" id="id" name="id" th:field="*{id}">
             <div>
@@ -45,7 +81,8 @@
             </div>
         <button type="submit" sec:authorize="hasAnyRole('ROLE_MainAdmin')">Update</button>
         </form>
-
+            </div>
+</div>
 </span>
 </body>
 </html>

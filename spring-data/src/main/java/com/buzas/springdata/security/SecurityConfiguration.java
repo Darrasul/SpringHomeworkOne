@@ -38,13 +38,14 @@ public class SecurityConfiguration {
                     .antMatchers("/**/*.css", "/**/*.js").permitAll()
                     .antMatchers("/").permitAll()
                     .antMatchers("/users/**").hasAnyRole("MainAdmin", "Admin")
+                    .antMatchers("/**").hasAnyRole("MainAdmin", "Admin", "Manager", "User")
                     .and()
                     .formLogin()
                     .successHandler(((request, response, authentication) -> {
                         Set<String> auths = authentication.getAuthorities().stream()
                                 .map(GrantedAuthority::getAuthority)
                                 .collect(Collectors.toSet());
-                        if (auths.contains("MainAdmin") || auths.contains("Admin")){
+                        if (auths.contains("ROLE_MainAdmin") || auths.contains("ROLE_Admin")){
                             response.sendRedirect("/SpringData/users/");
                         } else {
                             response.sendRedirect("/SpringData/");

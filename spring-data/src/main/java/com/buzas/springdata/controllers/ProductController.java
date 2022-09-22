@@ -1,10 +1,13 @@
 package com.buzas.springdata.controllers;
 
 import com.buzas.springdata.products.ProductDto;
+import com.buzas.springdata.services.LNService;
+import com.buzas.springdata.services.OrderService;
 import com.buzas.springdata.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -54,6 +57,7 @@ public class ProductController {
     }
 
     @PostMapping("product/create")
+    @Secured("ROLE_Manager")
     public ModelAndView createProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
         System.out.println("Target: " + result.getTarget());
         System.out.println("Is there some errors: " + result.hasErrors());
@@ -81,6 +85,7 @@ public class ProductController {
     }
 
     @GetMapping("product/new")
+    @Secured("ROLE_Manager")
     public ModelAndView getNewProductForm(Model model) {
         model.addAttribute("product", new ProductDto());
         return new ModelAndView("NewProductPage");
@@ -88,6 +93,7 @@ public class ProductController {
 
 
     @PostMapping("product/update/")
+    @Secured("ROLE_Manager")
     public ModelAndView updateProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
         System.out.println("Target: " + result.getTarget());
         System.out.println("Is there some errors: " + result.hasErrors());
@@ -115,12 +121,14 @@ public class ProductController {
     }
 
     @PostMapping("product/delete/{id}")
+    @Secured("ROLE_Manager")
     public ModelAndView deleteProductPost(@PathVariable("id") long id) {
         productService.deleteById(id);
         return new ModelAndView("ProductsPage");
     }
 
     @PostMapping("product/delete/all")
+    @Secured("ROLE_MainAdmin")
     public ModelAndView deleteAllProductsPost() {
         productService.deleteAll();
         return new ModelAndView("ProductsPage");

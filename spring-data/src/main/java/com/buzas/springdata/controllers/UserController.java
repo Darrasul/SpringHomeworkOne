@@ -1,6 +1,9 @@
 package com.buzas.springdata.controllers;
 
+import com.buzas.springdata.orders.LineItem;
 import com.buzas.springdata.services.AuthorityService;
+import com.buzas.springdata.services.LNService;
+import com.buzas.springdata.services.OrderService;
 import com.buzas.springdata.services.UserService;
 import com.buzas.springdata.users.User;
 import com.buzas.springdata.users.UserDto;
@@ -25,6 +28,8 @@ public class UserController {
 
     private final UserService userService;
     private final AuthorityService authService;
+    private final OrderService orderService;
+    private final LNService lnService;
 
     @GetMapping
     public ModelAndView getAllUsers(Model model) {
@@ -36,7 +41,25 @@ public class UserController {
     public ModelAndView getUserById(@PathVariable("id") long id, Model model) {
         model.addAttribute("user", userService.findById(id));
         model.addAttribute("roles", authService.findAll());
+        model.addAttribute("orders", orderService.showAllByUserId(id));
         return new ModelAndView("UpdUser");
+    }
+    @GetMapping("/order/{id}")
+    public ModelAndView getAllProductsFromOrderByOrderId(@PathVariable("id") long id, Model model) {
+        model.addAttribute("order", lnService.showAllByOrderId(id));
+        model.addAttribute("orderId", id);
+        return new ModelAndView("OrderPage");
+    }
+    @PostMapping("/order/delete")
+    public ModelAndView deleteItemFromOrder(@RequestParam long itemId, @RequestParam long orderId) {
+        orderService.removeFromOrder(lnService.findById(itemId), orderId);
+        return new ModelAndView("OrderPage");
+    }
+
+    @PostMapping("/order/")
+    public void addItemToOrder(@RequestParam long id,
+                               @RequestParam long itemId) {
+        orderService.addToOrder(lnService.findById(itemId), id);
     }
 
     @Secured("ROLE_MainAdmin")

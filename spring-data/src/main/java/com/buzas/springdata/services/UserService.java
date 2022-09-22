@@ -1,5 +1,6 @@
 package com.buzas.springdata.services;
 
+import com.buzas.springdata.orders.Order;
 import com.buzas.springdata.users.User;
 import com.buzas.springdata.users.UserDto;
 import com.buzas.springdata.users.UserDtoMapper;
@@ -55,6 +56,18 @@ public class UserService {
     public void update(UserDto userDto) {
         userRepo.deleteById(userDto.getId());
         userRepo.save(mapper.map(userDto, encoder));
+    }
+
+    public void removeOrder(Order order) {
+        User user = userRepo.findById(order.getCustomer().getId()).orElseThrow(() -> new FindException("No such user"));
+        user.removeOrder(order);
+        userRepo.saveAndFlush(user);
+    }
+
+    public void addOrder(Order order) {
+        User user = userRepo.findById(order.getCustomer().getId()).orElseThrow(() -> new FindException("No such user"));
+        user.addOrder(order);
+        userRepo.saveAndFlush(user);
     }
 
     public void deleteById(long id) {
