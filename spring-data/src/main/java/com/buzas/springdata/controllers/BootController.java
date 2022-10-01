@@ -137,15 +137,31 @@ public class BootController {
         return new ModelAndView("ProductsPage");
     }
 
-    @GetMapping("/api/v1/product")
+    @GetMapping("/api/v0/product")
     public List<ProductDto> listOfProduct(@RequestParam(required = false) Double minimumFilter,
                                           @RequestParam(required = false) Double maximumFilter) {
         return productService.findAllByFiltersV2(minimumFilter, maximumFilter);
     }
 
+    @GetMapping("/api/v1/product")
+    public Page<ProductDto> getAllProductsV2(@RequestParam(required = false) Double minimumFilter,
+                                             @RequestParam(required = false) Double maximumFilter,
+                                             @RequestParam(required = false, defaultValue = "1") Optional<Integer> page,
+                                             @RequestParam(required = false, defaultValue = "10") Optional<Integer> size) {
+        int currentPage = page.orElse(1) - 1;
+        int sizeValue = size.orElse(10);
+        Page<ProductDto> dtoPage = productService.findAllByFilters(minimumFilter, maximumFilter, currentPage, sizeValue);
+        return dtoPage;
+    }
+
     @GetMapping("/api/v1/product/{id}")
     public ProductDto productPage(@PathVariable("id") long id){
         return productService.findById(id).orElseThrow(() -> new FindException("No such product, wrong id: " + id));
+    }
+
+    @DeleteMapping("/api/v1/product/{id}")
+    public void deleteProductJSON(@PathVariable("id") long id){
+        productService.deleteById(id);
     }
 
     private void checkForErrors(@ModelAttribute("product") @Valid ProductDto productDto, BindingResult result) {
