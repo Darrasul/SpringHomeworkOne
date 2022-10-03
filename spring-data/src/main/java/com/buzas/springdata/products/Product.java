@@ -1,5 +1,6 @@
 package com.buzas.springdata.products;
 
+import com.buzas.springdata.orders.LineItem;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -7,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Entity
 @Getter
@@ -33,6 +35,10 @@ public class Product {
     @Column(nullable = false, length = 1024)
     private String currency;
 
+    @OneToMany(mappedBy = "product",
+            cascade = CascadeType.ALL)
+    private List<LineItem> orderedItems;
+
     public Product(Long id, String name) {
         this.id = id;
         this.name = name;
@@ -49,5 +55,10 @@ public class Product {
     }
 
     public Product() {
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }

@@ -1,10 +1,13 @@
 package com.buzas.springdata.controllers;
 
 import com.buzas.springdata.products.ProductDto;
+import com.buzas.springdata.services.LNService;
+import com.buzas.springdata.services.OrderService;
 import com.buzas.springdata.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.domain.Page;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
@@ -22,22 +25,11 @@ import java.util.Optional;
 @Slf4j
 @RequestMapping("/")
 @RequiredArgsConstructor
-public class BootController {
+public class ProductController {
 
     private final ProductService productService;
-//    Использовал для инициализации базы
-//    @PostConstruct
-//    public void init() {
-//        productRepo.saveAndFlush(new Product("Product #6", 113.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #7", 250.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #8", 275.75, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #9", 120.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #10", 37.0, "dollars"));
-//        productRepo.saveAndFlush(new Product("Product #11", 37.5, "dollars"));
-//        productRepo.saveAndFlush(new Product("Product #12", 240.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #13", 230.0, "rubles"));
-//        productRepo.saveAndFlush(new Product("Product #14", 50.0, "rubles"));
-//    }
+
+//    http://localhost:8080/SpringData/swagger-ui/index.html
 
     @GetMapping
     public ModelAndView getMainPage() {
@@ -65,6 +57,7 @@ public class BootController {
     }
 
     @PostMapping("product/create")
+    @Secured("ROLE_Manager")
     public ModelAndView createProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
         System.out.println("Target: " + result.getTarget());
         System.out.println("Is there some errors: " + result.hasErrors());
@@ -92,6 +85,7 @@ public class BootController {
     }
 
     @GetMapping("product/new")
+    @Secured("ROLE_Manager")
     public ModelAndView getNewProductForm(Model model) {
         model.addAttribute("product", new ProductDto());
         return new ModelAndView("NewProductPage");
@@ -99,6 +93,7 @@ public class BootController {
 
 
     @PostMapping("product/update/")
+    @Secured("ROLE_Manager")
     public ModelAndView updateProduct(@Valid @ModelAttribute("product") ProductDto productDto, BindingResult result) {
         System.out.println("Target: " + result.getTarget());
         System.out.println("Is there some errors: " + result.hasErrors());
@@ -126,12 +121,14 @@ public class BootController {
     }
 
     @PostMapping("product/delete/{id}")
+    @Secured("ROLE_Manager")
     public ModelAndView deleteProductPost(@PathVariable("id") long id) {
         productService.deleteById(id);
         return new ModelAndView("ProductsPage");
     }
 
     @PostMapping("product/delete/all")
+    @Secured("ROLE_MainAdmin")
     public ModelAndView deleteAllProductsPost() {
         productService.deleteAll();
         return new ModelAndView("ProductsPage");

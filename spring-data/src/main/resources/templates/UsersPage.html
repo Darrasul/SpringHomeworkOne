@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://thymeleaf.org" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://thymeleaf.org "
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <title>All Products</title>
+</head>
+<body>
+<a href="http://localhost:8080/SpringData">Главная</a>
+<a href="http://localhost:8080/SpringData/users/">Обновить страницу</a>
+<div align="center">
+    <table border="1">
+        <thead align="center">
+        <td>id</td>
+        <td>name</td>
+        <td>authorities</td>
+        <td sec:authorize="hasAnyRole('ROLE_MainAdmin')">buttons</td>
+        </thead>
+        <tbody align="center">
+        <tr th:each="user : ${users}">
+            <td>
+                <span th:text="${user.id}"></span>
+            </td>
+            <td>
+                <span th:text="${user.username}"></span>
+            </td>
+            <td>
+                <span th:text="${user.authorities}"></span>
+            </td>
+            <td sec:authorize="hasAnyRole('ROLE_MainAdmin')">
+                <form action="#" th:action="@{/users/} + ${user.id}" method="get">
+                    <input type="hidden" id="id" name="id" th:object="${user.id}">
+                    <button type="submit">Inspect</button>
+                </form>
+                <form action="#" th:action="@{/users/delete/} + ${user.id}" method="post">
+                    <input type="hidden" id="id_delete" name="id" th:object="${user.id}">
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <div>
+        <a th:href="@{/users/new}" sec:authorize="hasAnyRole('ROLE_MainAdmin')">Add new user</a>
+    </div>
+</div>
+</body>
+</html>
